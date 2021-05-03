@@ -23,6 +23,9 @@ class testLib(object):
                 LED(int([Nr])).off()
                 
     def readInPin(self, Nr):
-        return Button(int([Nr])).is_active()
+        if(Button(int([Nr])).is_active()):
+            return 1
+        else:
+            return 0
 
                 

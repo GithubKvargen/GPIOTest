@@ -4,13 +4,13 @@ Library    testLib
 
 
 *** Variables ***  
-${PinVal}
+
 
 *** Test Cases ***
 First
     Conf Out Pin    17    1
     ${PinVal}=    Read In Pin    17
-    Run Keyword If    ${PinVal}    Echo    
+    Run Keyword If    ${PinVal}==1    Echo    
 
 *** Keywords ***
 Echo
