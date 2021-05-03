@@ -9,13 +9,15 @@ Library    testLib
 *** Test Cases ***
 First
     Conf Out Pin    17    1
-    Run Keyword If    getPin    Echo    
+    ${PinVal}=    Read In Pin    17
+    Run Keyword If    ${PinVal}==True    Echo    
+    Run Keyword If    ${PinVal}==False    Echo2 
 
 *** Keywords ***
 Echo
-    Log    "This is working"    
+    Log    "This is true"    
     
-getPin
-    ${PinVal}=    Read In Pin    17
-    Convert To Boolean    ${PinVal}
-    [Return]    ${PinVal}
+Echo2
+    Log    "This is false"
+    
+
