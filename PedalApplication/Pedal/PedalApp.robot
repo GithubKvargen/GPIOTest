@@ -3,9 +3,7 @@ Documentation    Version of the Robotframework Test
 Library    testLib
 
 
-*** Variables ***
-  
-
+*** Variables ***  
 
 
 *** Test Cases ***

@@ -1,8 +1,13 @@
+import gpiozero
+from gpiozero.output_devices import LED
+from gpiozero.input_devices import Button
+
 class testLib(object):
 
     ROBOT_LIBRARY_VERSION = 1.0
 
     def __init__(self):
+        
         pass
 
     def Hello(self):
@@ -12,7 +17,7 @@ class testLib(object):
         print("FUCK")
 
     def confOutPin(self, Nr, Value):
-            if(Bool == 1):
+            if(Value == 1):
                 LED(Nr).on()
             else:
                 LED(Nr).off()
