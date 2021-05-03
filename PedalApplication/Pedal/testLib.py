@@ -17,12 +17,12 @@ class testLib(object):
         print("FUCK")
 
     def confOutPin(self, Nr, Value):
-            if(Value == 1):
-                LED(Nr).on()
+            if(int(Value) == 1):
+                LED(int(Nr)).on()
             else:
-                LED(Nr).off()
+                LED(int(Nr)).off()
                 
     def readInPin(self, Nr):
-        return Button(Nr).is_active()
+        return Button(int(Nr)).is_active()
 
                 
