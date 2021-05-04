@@ -28,13 +28,36 @@ class testLib(object):
         btn = Button(Nr)
         
                 
-    def ReadInPin(self, Nr):
-        print("do we even get here?")
-        if(Button(Nr).is_active()):
-            print("Hello are we here?")
-            return 1
+    #def ReadInPin(self, Nr):
+    #    print("do we even get here?")
+    #    if(Button(Nr).is_active()):
+     #       print("Hello are we here?")
+     #       return 1
+     #   else:
+      #      print("Maybe here?")
+      #      return 0
+        
+    def SetOutPin(self, Nr):
+        led = LED(Nr)
+        return led
+    
+    def SetInPin(self, Nr):
+        btn = Button(Nr)
+        return btn
+    
+    def TurnOnPin(self, LED):
+        LED.on(self)
+        
+    def TurnOffPin(self, LED):
+        LED.off(self)
+        
+    def ReadInPin(self, Button):
+        print("Do we get here?")
+        if(Button.is_active()):
+            print("We got it as active")
+            return int(1)
         else:
-            print("Maybe here?")
-            return 0
+            print("Nonono")
+            return int(1)
 
                 

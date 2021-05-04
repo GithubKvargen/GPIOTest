@@ -5,8 +5,8 @@ Library    testLib
 
 
 *** Variables ***  
-${Pin18}=    ${18}
-${Pin24}=    ${24}
+${18}=    ${18}
+${24}=    ${24}
 ${On}=    ${1}
 ${Off}=    ${0}
 
@@ -14,13 +14,15 @@ ${Off}=    ${0}
 
 *** Test Cases ***
 First
-    ${result}=    Convert To Integer    ${Pin18} 
+    
+    ${result3}=    Convert To Integer    ${24}
+    ${Pin24}=    Set In Pin    ${result3}
+    ${result}=    Convert To Integer    ${18}  
+    ${Pin18}=    Set Out Pin    ${result}
+    Turn On Pin    ${Pin18}
     ${result2}=    Convert To Integer    ${On}    
-    ${result3}=    Convert To Integer    ${Pin24}    
-    Conf Out Pin    ${result}    ${result2}
-    Conf In Pin    ${result3}
     Sleep    1    
-    ${PinVal}=    Read In Pin    ${result3}
+    ${PinVal}=    Read In Pin    ${Pin24}
     Sleep    1    
     Run Keyword If    ${PinVal}==${On}    Echo    
     Sleep    1    
