@@ -23,9 +23,9 @@ pipeline {
                 sh "whoami"
                 sh "ls"
 
-                //dir("${WORKSPACE}/TestNGROK/NgRokGit/"){
-                  //  sh "python -m robot NgRokGitTest.robot"
-                //}
+                dir("${WORKSPACE}/GPIOtest/PedalApplication/Pedal/"){
+                    sh "python -m robot PedalApp.robot"
+                }
                 
             }
         }
