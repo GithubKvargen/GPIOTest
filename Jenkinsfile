@@ -24,7 +24,8 @@ pipeline {
                 sh "ls"
 
                 dir("${WORKSPACE}/GPIOtest/PedalApplication/Pedal/"){
-                    sh "python -m robot PedalApp.robot"
+                    sh "ls"
+                    //sh "python -m robot PedalApp.robot"
                 }
                 
             }
