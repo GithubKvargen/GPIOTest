@@ -16,8 +16,11 @@ First
     ${result}=    Convert To Integer    ${Pin17} 
     ${result2}=    Convert To Integer    ${On}    
     Conf Out Pin    ${result}    ${result2}
+    Sleep    1    
     ${PinVal}=    Read In Pin    ${result}
+    Sleep    1    
     Run Keyword If    ${PinVal}==1    Echo    
+    Sleep    1    
 
 *** Keywords ***
 Echo
