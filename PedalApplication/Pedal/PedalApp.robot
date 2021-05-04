@@ -22,7 +22,7 @@ First
     Sleep    1    
     ${PinVal}=    Read In Pin    ${result3}
     Sleep    1    
-    Run Keyword If    ${PinVal}==1    Echo    
+    Run Keyword If    ${PinVal}==${On}    Echo    
     Sleep    1    
     
 

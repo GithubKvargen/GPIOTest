@@ -30,8 +30,10 @@ class testLib(object):
                 
     def ReadInPin(self, Nr):
         if(Button(Nr).is_active()):
+            print("Hello are we here?")
             return 1
         else:
+            print("Maybe here?")
             return 0
 
                 
