@@ -24,6 +24,7 @@ First
     Sleep    1    
     Run Keyword If    ${PinVal}==1    Echo    
     Sleep    1    
+    
 
 *** Keywords ***
 Echo

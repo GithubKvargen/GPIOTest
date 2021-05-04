@@ -25,7 +25,7 @@ class testLib(object):
                 led.off()
                 
     def ConfInPin(self, Nr):
-        newButton(Nr)
+        btn = Button(Nr)
         
                 
     def ReadInPin(self, Nr):
