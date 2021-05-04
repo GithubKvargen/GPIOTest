@@ -16,14 +16,20 @@ class testLib(object):
     def FUCK(self):
         print("FUCK")
 
-    def confOutPin(self, Nr, Value):
-            if(int([Value]) == 1):
-                LED(int([Nr])).on()
+    def ConfOutPin(self, Nr, Value):
+            if(Value == 1):
+                led = LED(Nr)
+                led.on()
             else:
-                LED(int([Nr])).off()
+                led = LED(Nr)
+                led.off()
                 
-    def readInPin(self, Nr):
-        if(Button(int([Nr])).is_active()):
+    def ConfInPin(self, Nr):
+        newButton(Nr)
+        
+                
+    def ReadInPin(self, Nr):
+        if(Button(Nr).is_active()):
             return 1
         else:
             return 0
