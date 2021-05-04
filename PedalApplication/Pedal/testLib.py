@@ -52,12 +52,12 @@ class testLib(object):
         LED.off()
         
     def ReadInPin(self, Button):
-        print("Do we get here?")
-        if(Button.is_active()):
-            print("We got it as active")
-            return int(1)
-        else:
-            print("Nonono")
-            return int(1)
+        print(Button.value)
+        #if(Button.value):
+         #   print("We got it as active")
+          #  return int(1)
+        #else:
+         #   print("Nonono")
+          #  return int(1)
 
                 
