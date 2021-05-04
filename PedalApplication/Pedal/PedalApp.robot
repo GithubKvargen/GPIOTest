@@ -19,7 +19,7 @@ GPIOTest
     Turn Off Pin    ${Pin23}
     Sleep    10    
     Turn On Pin    ${Pin23}
-    Sleep    10    
+    Sleep    0.5      
     ${result}=    Read In Pin    ${Pin24}
     Run Keyword If    ${result}==${On}    Echo    
     Sleep    10    
