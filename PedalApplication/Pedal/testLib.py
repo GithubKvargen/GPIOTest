@@ -13,10 +13,15 @@ class testLib(object):
 
     def SetOutPin(self, Nr):
         led = LED(Nr)
+        print(led.value)
+        print(led.pin)
         return led
     
     def SetInPin(self, Nr):
         btn = Button(Nr)
+        btn.pull_up = False
+        print(btn.value)
+        print(btn.pin)
         return btn
     
     def TurnOnPin(self, LED):
@@ -26,17 +31,28 @@ class testLib(object):
         print(LED.pin)
         
     def TurnOffPin(self, LED):
+        print(LED.value)
         LED.off()
+        print(LED.value)
+        print(LED.pin)
         
     def ReadInPin(self, Button):
         print(Button.pin)
-        print(Button._read())
+        print(Button.value)
         return int(Button.value)
     
     def ShutdownOutPin(self, LED):
+        print(LED.value)
+        print(LED.pin)
         LED.close()
+        print(LED.value)
+        print(LED.pin)
         
     def ShutdownInPin(self, Button):
+        print(Button.value)
+        print(Button.pin)
         Button.close()
+        print(Button.value)
+        print(Button.pin)
 
                 
