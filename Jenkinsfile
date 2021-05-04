@@ -23,9 +23,9 @@ pipeline {
                 sh "whoami"
                 sh "ls"
 
-                dir("${WORKSPACE}/GPIOtest/PedalApplication/Pedal/"){
+                dir("${WORKSPACE}/PedalApplication/Pedal/"){
                     sh "ls"
-                    //sh "python -m robot PedalApp.robot"
+                    sh "python -m robot PedalApp.robot"
                 }
                 
             }
