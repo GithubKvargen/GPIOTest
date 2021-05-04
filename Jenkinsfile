@@ -1,43 +1,25 @@
+/* 
+Authors: Jonatan Ryd & Jeffrey Persson
+Date: 2021-05-04
+Test: Running a Robotframework test on target RaspberryPi 
+*/
 pipeline {
     agent any 
     stages {
-        stage('Static Analysis') {
-            steps {
-                echo 'Run the static analysis to the code' 
-            }
-        }
-        stage('Compile') {
-            steps {
-                echo 'Compile the source code' 
-            }
-        }
-        stage('Security Check') {
+        // Connecting GitHub to user email
+        stage('Connect GitHub') {
             steps {
                 echo 'Run the security check against the application' 
                 sh "git config --global user.email jeffes159@gmail.com"
             }
         }
+        // Run the test
         stage('Run Unit Tests') {
             steps {
-                sh "python --version"
-                sh "whoami"
-                sh "ls"
-
                 dir("${WORKSPACE}/PedalApplication/Pedal/"){
-                    sh "ls"
                     sh "python -m robot PedalApp.robot"
                 }
                 
-            }
-        }
-        stage('Run Integration Tests') {
-            steps {
-                echo 'Run only crucial integration tests from the source code' 
-            }
-        }
-        stage('Publish Artifacts') {
-            steps {
-                echo 'Save the assemblies generated from the compilation' 
             }
         }
     }
