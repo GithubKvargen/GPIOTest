@@ -29,6 +29,7 @@ class testLib(object):
         
                 
     def ReadInPin(self, Nr):
+        print("do we even get here?")
         if(Button(Nr).is_active()):
             print("Hello are we here?")
             return 1
