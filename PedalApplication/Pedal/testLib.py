@@ -47,12 +47,15 @@ class testLib(object):
     
     def TurnOnPin(self, LED):
         LED.on()
+        print(LED.value)
+        print(LED.pin)
         
     def TurnOffPin(self, LED):
         LED.off()
         
     def ReadInPin(self, Button):
         print(Button.value)
+        return int("1")
         #if(Button.value):
          #   print("We got it as active")
           #  return int(1)
