@@ -29,6 +29,7 @@ class testLib(object):
         LED.off()
         
     def ReadInPin(self, Button):
+        print(Button.pin)
         print(Button.value)
         return int(Button.value)
     
