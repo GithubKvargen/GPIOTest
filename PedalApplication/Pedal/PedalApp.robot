@@ -5,8 +5,7 @@ Library    testLib
 
 
 *** Variables ***  
-${18}=    ${18}
-${24}=    ${24}
+
 ${On}=    ${1}
 ${Off}=    ${0}
 
@@ -24,7 +23,7 @@ First
     Sleep    1    
     ${PinVal}=    Read In Pin    ${Pin24}
     Sleep    1    
-    Run Keyword If    ${PinVal}==${On}    Echo    
+    Run Keyword If    ${PinVal}==${result2}    Echo    
     Sleep    1    
     
 

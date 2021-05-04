@@ -46,10 +46,10 @@ class testLib(object):
         return btn
     
     def TurnOnPin(self, LED):
-        LED.on(self)
+        LED.on()
         
     def TurnOffPin(self, LED):
-        LED.off(self)
+        LED.off()
         
     def ReadInPin(self, Button):
         print("Do we get here?")
