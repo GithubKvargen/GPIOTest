@@ -30,7 +30,7 @@ class testLib(object):
         
     def ReadInPin(self, Button):
         print(Button.pin)
-        print(Button.is_active)
+        print(Button._read())
         return int(Button.value)
     
     def ShutdownOutPin(self, LED):
