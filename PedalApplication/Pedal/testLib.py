@@ -13,14 +13,10 @@ class testLib(object):
 
     def SetOutPin(self, Nr):
         led = LED(Nr)
-        print(led.value)
-        print(led.pin)
         return led
     
     def SetInPin(self, Nr):
         btn = Button(Nr)
-        print(btn.value)
-        print(btn.pin)
         return btn
     
     def TurnOnPin(self, LED):

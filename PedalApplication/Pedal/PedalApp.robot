@@ -10,8 +10,8 @@ Library    testLib
 
     
 GPIOTest
-    ${On}=    Convert To Integer    ${1}    
-    ${Off}=    Convert To Integer    ${0}    
+    ${On}=    Convert To Integer    ${0}    
+    ${Off}=    Convert To Integer    ${1}    
     ${int23}=    Convert To Integer    ${23}    
     ${int24}=    Convert To Integer    ${24}    
     ${Pin23}=    Set Out Pin    ${int23}
