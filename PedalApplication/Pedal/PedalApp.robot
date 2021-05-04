@@ -17,8 +17,10 @@ First
     ${Pin24}=    Set In Pin    ${result3}
     ${result}=    Convert To Integer    ${18}  
     ${Pin18}=    Set Out Pin    ${result}
+    Turn Off Pin    ${Pin18}
+    Sleep    2    
     Turn On Pin    ${Pin18}
-    Sleep    1
+    Sleep    1    
     ${result2}=    Convert To Integer    ${On}    
     Sleep    1    
     ${PinVal}=    Read In Pin    ${Pin24}
