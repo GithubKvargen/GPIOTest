@@ -46,6 +46,7 @@ class testLib(object):
         return btn
     
     def TurnOnPin(self, LED):
+        print(LED.value)
         LED.on()
         print(LED.value)
         print(LED.pin)
