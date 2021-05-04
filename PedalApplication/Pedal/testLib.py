@@ -19,7 +19,6 @@ class testLib(object):
     
     def SetInPin(self, Nr):
         btn = Button(Nr)
-        btn.pull_up = False
         print(btn.value)
         print(btn.pin)
         return btn
