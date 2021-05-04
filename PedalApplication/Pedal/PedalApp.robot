@@ -17,6 +17,8 @@ GPIOTest
     ${Pin23}=    Set Out Pin    ${int23}
     ${Pin24}=    Set In Pin    ${int24}
     Turn Off Pin    ${Pin23}
+    ${result}=    Read In Pin    ${Pin24}
+    Run Keyword If    ${result}==${Off}    Echo2 
     Sleep    10    
     Turn On Pin    ${Pin23}
     Sleep    0.5      

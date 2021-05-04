@@ -44,14 +44,12 @@ class testLib(object):
         print(LED.value)
         print(LED.pin)
         LED.close()
-        print(LED.value)
-        print(LED.pin)
+
         
     def ShutdownInPin(self, Button):
         print(Button.value)
         print(Button.pin)
         Button.close()
-        print(Button.value)
-        print(Button.pin)
+
 
                 
